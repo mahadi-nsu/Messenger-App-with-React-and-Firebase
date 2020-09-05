@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   border: 1px solid black;
-  width: 80%;
-  height: 700px;
+  width: 60%;
+  height: fit-content;
   margin: 0 auto;
+}
+.form__inputs{
+  margin-bottom: 30px;
 }

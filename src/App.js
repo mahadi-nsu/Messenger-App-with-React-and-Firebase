@@ -14,6 +14,7 @@ function App() {
   useEffect(
     () => {
       setusername(prompt('Enter your name : '));
+      // const name = prompt("Enter your Name");
       // setusername(name);
       // console.log(username);
     }, [])
@@ -31,7 +32,7 @@ function App() {
     <div className="App">
       <h1> Messenger Clone using React and firebase </h1>
       <h3>Welcome Mr. {username}</h3>
-      <form noValidate autoComplete="off">
+      <form noValidate autoComplete="off" className = "form__inputs">
         <TextField
           label="Enter Message ..."
           value={inputData}
@@ -46,9 +47,8 @@ function App() {
         >
           Send
        </Button>
-
-        <Message messages={messages} />
       </form>
+      <Message messages={messages} />
     </div>
   );
 }

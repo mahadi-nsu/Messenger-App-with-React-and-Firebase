@@ -1,3 +1,15 @@
 .message-top{
     padding-top: 20px;
 }
+.message__card{
+    margin: 10px;
+    width: fit-content !important;
+}
+.message__cardcontent{
+    margin: 5px !important;
+    padding: 5px !important;
+}
+.message__cardcontent p{
+    padding: 0 !important;
+    margin: 0 !important;
+}

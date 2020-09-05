@@ -1,5 +1,6 @@
 import React from 'react';
 import './message-style.css';
+import { Card, CardContent, Typography } from '@material-ui/core'
 
 function Message({ messages }) {
     console.log(messages);
@@ -7,10 +8,15 @@ function Message({ messages }) {
         <>
             {
                 messages.map((data, i) =>
-                    <div key = {i}>
-                        <h2>{data.name} : {data.text}</h2>
-                    </div>
-
+                    <Card key={i} className = "message__card">
+                        <CardContent className = "message__cardcontent">
+                            <Typography
+                             variant="h5" gutterBottom
+                            >
+                                <p>{data.name} : {data.text}</p>
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 )
             }
         </>
