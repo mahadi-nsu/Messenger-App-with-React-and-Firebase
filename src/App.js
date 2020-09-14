@@ -8,7 +8,7 @@ function App() {
   const [inputData, setinputData] = useState('');
   const [messages, setmessages] = useState([
     { name: 'Mahadi', text: "Hello" },
-    { name: 'Mahadi', text: "Hello" }
+    { name: 'Hassan', text: "Hiii" }
   ]);
   const [username, setusername] = useState('');
   useEffect(
@@ -27,12 +27,12 @@ function App() {
     setinputData('');
   }
 
-  console.log(inputData);
+  // console.log(inputData);
   return (
     <div className="App">
       <h1> Messenger Clone using React and firebase </h1>
       <h3>Welcome Mr. {username}</h3>
-      <form noValidate autoComplete="off" className = "form__inputs">
+      <form noValidate autoComplete="off" className="form__inputs">
         <TextField
           label="Enter Message ..."
           value={inputData}
@@ -48,7 +48,11 @@ function App() {
           Send
        </Button>
       </form>
-      <Message messages={messages} />
+      {
+        messages.map((data, i) =>
+          <Message message={data} host = {username} key={i} />
+        )
+      }
     </div>
   );
 }

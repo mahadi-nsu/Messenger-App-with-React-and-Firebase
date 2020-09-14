@@ -13,3 +13,14 @@
     padding: 0 !important;
     margin: 0 !important;
 }
+.message__realUser{
+    margin-left: auto;
+    color: white;
+    text-align: left !important;
+}
+.message__userCard{
+    background-color: blue !important;
+}
+.message__guestCard{
+    background-color: grey !important;
+}
